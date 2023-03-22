@@ -57,8 +57,9 @@ public class Snack {
 		this.price = price;
 	}
 	public String information() {
-		return this.kind+" "+ this.name+" "+ this.flavor+" "+ this.numOf+" "+this.price;
-	}
+		return  this.kind+"("+this.name+" - "+this.flavor+") "+
+				this.numOf+"개 "+this.price+"원";
+				}
 	
 	
 }
