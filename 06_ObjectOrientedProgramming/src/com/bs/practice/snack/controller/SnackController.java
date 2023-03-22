@@ -10,7 +10,7 @@ public class SnackController {
 	}
 	
 	public String saveData(String kind, String name, String flavor, int numOf,int price) {
-		
+		// 이걸 리턴에 한번에넣는법 물어보기
 		sa.setKind(kind);
 		sa.setName(name);
 		sa.setFlavor(flavor);
