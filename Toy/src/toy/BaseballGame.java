@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BaseballGame {
 
 	public static void main(String[] args) {
-
+//
 		/*
 		 * 램덤으로 세개의 수를 각 자리 수에 저장 -> 정답값 사용자가 임의의 수 3개를입력받음 정답값이랑 비교하여 사용자가 입력한 숫자가 정답과
 		 * 자리수와 숫자가 일치하면 -> 스트라이크, 사용자가 입력한 숫자가 정답과일치하고 자리수가 맞지 않으면 -> 볼, 사용자가 입력한 숫자가
