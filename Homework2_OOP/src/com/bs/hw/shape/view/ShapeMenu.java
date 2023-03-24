@@ -62,7 +62,7 @@ public class ShapeMenu {
 				break;
 
 			case 9:
-				// 이게왜 메인뷰로 돌아가지?
+				// return 은 호출한 메소드로 돌아가는것
 				System.out.println("메인으로 돌아갑니다.");
 				return;
 			default : System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
