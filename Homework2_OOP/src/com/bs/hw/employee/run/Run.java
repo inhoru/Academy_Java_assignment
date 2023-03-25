@@ -1,4 +1,4 @@
-package com.bs.hw.cmployee.run;
+package com.bs.hw.employee.run;
 
 import com.bs.hw.employee.view.EmployeeMenu;
 
