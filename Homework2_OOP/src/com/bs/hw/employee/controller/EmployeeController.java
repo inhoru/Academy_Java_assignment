@@ -11,6 +11,7 @@ public class EmployeeController {
 		e.setGender(gender);
 		e.setPhone(phone);
 		
+		
 	}
 	public void add (int empNo, String name, char gender, String phone, String dapt, int salary, double bonus) {
 		e.setEmpNo(empNo);
