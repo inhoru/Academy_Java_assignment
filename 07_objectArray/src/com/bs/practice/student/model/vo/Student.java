@@ -30,6 +30,6 @@ public class Student {
 		this.score = score;
 	}
 	public String inform() {
-		return"";
+		return "이름 : "+this.name+ "/ 과목 : "+this.subject+ "/ 점수 : "+this.score+" ";
 	}
 }
