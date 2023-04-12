@@ -10,9 +10,13 @@ public class AscTitle implements Comparator{
 	public int compare(Object o1,Object o2) {
 		Music m = (Music)o1;
 		Music m2 = (Music)o2;
-		if(m.getSinger()>m2.getSinger()) return +1;
-		else if(m.getSinger()<m2.getSinger()) return -1;
-		else return 0;
+		if(m.getTitle().compareTo(m2.getTitle())==0) {
+			return m.getSinger().compareTo(m2.getSinger());
+		}else {
+			return m.getTitle().compareTo(m2.getTitle());
+		}
+		
+		
 	}
 	
 }

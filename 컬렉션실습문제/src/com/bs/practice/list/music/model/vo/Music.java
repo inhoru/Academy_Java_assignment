@@ -2,13 +2,16 @@ package com.bs.practice.list.music.model.vo;
 
 import java.util.Objects;
 
-public class Music {
+import com.bs.practice.list.library.model.vo.Book;
+
+public class Music implements Comparable<Music>{
 	private String title;
 	private String singer;
 	
 	public Music() {}
 	
 	public Music(String title, String singer) {
+		super();
 		this.title = title;
 		this.singer = singer;
 	}
@@ -31,7 +34,7 @@ public class Music {
 
 	@Override
 	public String toString() {
-		return title + "-" + singer;
+		return singer + "-" + title;
 	}
 
 	@Override
@@ -53,7 +56,10 @@ public class Music {
 	
 
 	
-	
+	@Override
+	public int compareTo(Music o) {
+		return o.getSinger().compareTo(this.getSinger());
+	}
 	
 	
 	

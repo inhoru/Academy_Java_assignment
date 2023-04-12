@@ -30,17 +30,18 @@ public class MusicView {
 			
 		case 3 :printAll();break;
 			
-		case 4 :
+		case 4 :searchMusic();break;
 			
-		case 5 :
+		case 5 :removeMusic();break;
 			
-		case 6 :
+		case 6 :setMusic();break;
 			
-		case 7 :
+		case 7 :ascTitle();break;
 			
-		case 8 :
+		case 8 :descSinger();break;
 			
 		case 9 :
+			System.out.println("프로그램 종료");return;
 			
 			
 		}
@@ -74,19 +75,56 @@ public class MusicView {
 		
 	}
 	public void searchMusic() {
+		sc.nextLine();
+		System.out.println("****** 특정 곡 검색 ******");
+		System.out.print("검색할 곡 명 : ");
+		String title = sc.nextLine();
+		System.out.println(mc.searchMusic(title)!=null?mc.searchMusic(title):"곡이없어");
 		
 	}
 	public void removeMusic() {
-		
+		System.out.print("삭제할 곡 명 : ");
+		sc.nextLine();
+		String title = sc.nextLine();
+		Music m = mc.removeMusic(title);
+		if(m!=null) {
+			System.out.println(m.getSinger()+" - "+m.getTitle()+"을(를) 삭제 했습니다.");
+		}else {
+			System.out.println("검색한 곡이 없습니다.");
+		}
 	}
 	public void setMusic() {
+		System.out.println("****** 특정 곡 수정 *******");
+		System.out.print("검색할 곡 명 :");
+		sc.nextLine();
+		String searchTitle = sc.nextLine();
+		System.out.print("수정할 곡 명 : ");
+		String title = sc.nextLine();
+		System.out.print("수정할 가수 명 : ");
+		String singer = sc.nextLine();
+		Music set = new Music(title,singer);
+		Music m = mc.searchMusic(searchTitle);
+		System.out.println(mc.setMusic(searchTitle,set)!=null?
+				m.getSinger()+" - "+m.getTitle()+" 값이 변경되었습니다.":"검색한 곡이 없어요");	
 		
 	}
 	public void ascTitle() {
+		if(mc.ascTitle()==1) {
+			
+			System.out.println("정렬 성공");
+		}
+			
+	
+		
+		
 		
 	}
 	public void descSinger() {
-		
+		if(mc.descSinger()==1) {
+			
+			System.out.println("정렬 성공");
+		}
+			
 	}
 	
 }
