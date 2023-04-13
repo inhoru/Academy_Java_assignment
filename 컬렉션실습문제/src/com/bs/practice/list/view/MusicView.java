@@ -105,7 +105,7 @@ public class MusicView {
 		Music set = new Music(title,singer);
 		Music m = mc.searchMusic(searchTitle);
 		System.out.println(mc.setMusic(searchTitle,set)!=null?
-				m.getSinger()+" - "+m.getTitle()+" 값이 변경되었습니다.":"검색한 곡이 없어요");	
+				m +" 값이 변경되었습니다.":"검색한 곡이 없어요");	
 		
 	}
 	public void ascTitle() {
