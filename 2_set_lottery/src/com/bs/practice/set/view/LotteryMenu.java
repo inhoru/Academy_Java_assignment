@@ -88,6 +88,7 @@ public class LotteryMenu {
 			System.out.println("추첨자가 4명 이상이여야합니다.");
 		}else {
 			System.out.println(lc.winObject());
+			
 		}
 	}
 	

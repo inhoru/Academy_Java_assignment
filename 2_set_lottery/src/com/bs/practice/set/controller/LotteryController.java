@@ -41,17 +41,18 @@ public class LotteryController {
 		// 만일 당첨자 목록에 삭제된 추첨 대상자가 있다면
 		// 기존에 당첨된 사람은 제외하고 삭제된 사람의 자리만 새로운 추첨자로 채움
 		List list = new ArrayList(lottery);
-		for (int i = 0; i < list.size(); i++) {
-			if (win.size() < 4&&win.isEmpty()) {
+		if(list.size()>=4) {
+			while(win.size()<4) {
 				win.add(list.get((int) (Math.random() * list.size())));
-
 			}
-
 		}
-		while(win.size()<4&& list.size()>=4) {
-			win.add(list.get((int) (Math.random() * list.size())));
-		}
+//		for (int i = 0; i < list.size(); i++) {
+//			if (win.size() < 4 && list.size()>=4) {
+//				win.add(list.get((int) (Math.random() * list.size())));
+//			}
+//		}
 		return win;
+		
 	}
 	// Collections.shuffle(list); 램덤으로 섞어주는 메소드
 	// int index = (int) (Math.random() * list.size());
